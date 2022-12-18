@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://services/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services/">
+
+<xs:element name="AllbutnoMember" type="tns:AllbutnoMember"/>
+
+<xs:element name="AllbutnoMemberResponse" type="tns:AllbutnoMemberResponse"/>
+
+<xs:element name="covidcase" type="tns:covidcase"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="persist" type="tns:persist"/>
+
+<xs:element name="persistResponse" type="tns:persistResponse"/>
+
+<xs:complexType name="persist">
+<xs:sequence>
+<xs:element name="arg0" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persistResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AllbutnoMember">
+<xs:sequence>
+<xs:element name="findbyyear" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AllbutnoMemberResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:covidcase" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="covidcase">
+<xs:sequence>
+<xs:element name="caseForeign" type="xs:int" minOccurs="0"/>
+<xs:element name="caseNewDiff" type="xs:int" minOccurs="0"/>
+<xs:element name="caseNewPrev" type="xs:int" minOccurs="0"/>
+<xs:element name="casePrison" type="xs:int" minOccurs="0"/>
+<xs:element name="caseWalkin" type="xs:int" minOccurs="0"/>
+<xs:element name="deathNewDiff" type="xs:int" minOccurs="0"/>
+<xs:element name="deathNewPrev" type="xs:int" minOccurs="0"/>
+<xs:element name="newCase" type="xs:int" minOccurs="0"/>
+<xs:element name="newCaseExcludeabroad" type="xs:int" minOccurs="0"/>
+<xs:element name="newDeath" type="xs:int" minOccurs="0"/>
+<xs:element name="newRecovered" type="xs:int" minOccurs="0"/>
+<xs:element name="totalCase" type="xs:int" minOccurs="0"/>
+<xs:element name="totalCaseExcludeabroad" type="xs:int" minOccurs="0"/>
+<xs:element name="totalDeath" type="xs:int" minOccurs="0"/>
+<xs:element name="totalRecovered" type="xs:int" minOccurs="0"/>
+<xs:element name="updateDate" type="xs:string" minOccurs="0"/>
+<xs:element name="weeknum" type="xs:int" minOccurs="0"/>
+<xs:element name="yeah" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
